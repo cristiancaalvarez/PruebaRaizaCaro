@@ -1,0 +1,116 @@
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: linear-gradient(to right, #f9fafc, #e9ecef);
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.example-card {
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.example-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.small-card {
+  flex: 1;
+  height: 300px;
+}
+
+.large-card {
+  flex: 2;
+  height: 450px;
+}
+
+.mat-card-header {
+  padding: 1.2rem;
+  background: linear-gradient(135deg, #2196f3, #21cbf3);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.card-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+}
+
+.content-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #444;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.product-list,
+.client-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product-list li,
+.client-list li {
+  padding: 0.8rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.product-list li:last-child,
+.client-list li:last-child {
+  border-bottom: none;
+}
+
+.mat-card-avatar {
+  background-color: #ffffff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #2196f3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mat-card-content {
+  padding: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .small-card,
+  .large-card {
+    width: 90%;
+    height: auto;
+  }
+}

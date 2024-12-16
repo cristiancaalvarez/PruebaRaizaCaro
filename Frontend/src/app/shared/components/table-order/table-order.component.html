@@ -1,0 +1,53 @@
+<div class="table-wrapper">
+  <table mat-table [dataSource]="orders" class="styled-table">
+    <ng-container matColumnDef="id">
+      <th class="header-cell" mat-header-cell *matHeaderCellDef>#</th>
+      <td class="data-cell" mat-cell *matCellDef="let order">
+        {{ order.id }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="fecha">
+      <th class="header-cell" mat-header-cell *matHeaderCellDef>Fecha del pedido</th>
+      <td class="data-cell" mat-cell *matCellDef="let order">
+        {{ order.fecha | date : "longDate" }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="total">
+      <th class="header-cell" mat-header-cell *matHeaderCellDef>Total Pagado</th>
+      <td class="data-cell" mat-cell *matCellDef="let order">
+        {{ order.total | currency : "COP " : "symbol" : "1.0-0" }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="acciones">
+      <th class="header-cell" mat-header-cell *matHeaderCellDef>Opciones</th>
+      <td class="data-cell" mat-cell *matCellDef="let order">
+        <button
+          mat-icon-button
+          class="action-button view-button"
+          (click)="verMas(order.id)"
+        >
+          <mat-icon>info</mat-icon>
+        </button>
+
+        <button
+          mat-icon-button
+          color="warn"
+          class="action-button delete-button"
+          (click)="deleteOrder(order.id)"
+        >
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr class="header-row" mat-header-row *matHeaderRowDef="['id', 'fecha', 'total', 'acciones']"></tr>
+    <tr mat-row *matRowDef="let row; columns: ['id', 'fecha', 'total', 'acciones']"></tr>
+
+    <tr class="no-data-row" *matNoDataRow>
+      <td class="no-data-cell" colspan="4">No hay datos disponibles</td>
+    </tr>
+  </table>
+</div>

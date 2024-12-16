@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="toolbar-svg">
+  <defs>
+    <linearGradient id="toolbarGradient" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#4E2581"></stop>
+      <stop offset="100%" stop-color="#8A177F"></stop>
+    </linearGradient>
+  </defs>
+
+  <path
+    d="M0,160L40,149.3C80,139,160,117,240,122.7C320,128,400,160,480,170.7C560,181,640,171,720,138.7C800,107,880,53,960,58.7C1040,64,1120,128,1200,154.7C1280,181,1360,171,1400,165.3L1440,160L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"
+    fill="url(#toolbarGradient)">
+  </path>
+
+  <foreignObject x="0" y="0" width="1440" height="320">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="toolbar-content">
+      <div class="toolbar-container">
+        <div class="toolbar-links">
+          <a mat-button routerLink="/home/products" style="font-size: 1.5em;">Productos</a>
+          <a mat-button routerLink="/home/order" style="font-size: 1.5em;">Ordenes</a>
+        </div>
+
+        <div class="toolbar-actions">
+          <button mat-button class="logout-button" (click)="logout()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="logout-icon">
+              <path d="M10 9v6h4v-4h4v-2h-4v-4h-4zM4 4h10v2h-10v12h10v2h-10c-1.1 0-2-.9-2-2v-12c0-1.1.9-2 2-2z" />
+            </svg>
+            Cerrar Sesión
+          </button>
+        </div>
+      </div>
+    </div>
+  </foreignObject>
+</svg>
+
+<div class="footer-text-container">
+  <h2 class="footer-text">Ecommerce Talataa</h2>
+</div>

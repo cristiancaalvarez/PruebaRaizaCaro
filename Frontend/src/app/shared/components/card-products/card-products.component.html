@@ -1,0 +1,38 @@
+<div class="card-container">
+  <mat-card *ngFor="let item of product" class="card">
+    <mat-card-header class="card-header">
+      <mat-card-title class="card-title">{{ item.nombre }}</mat-card-title>
+    </mat-card-header>
+
+    <img
+      appImgBroken
+      [customImg]="'../assets/images/img-broken.png'"
+      [src]="getImageForCategory(item.categoria)"
+      class="product-image"
+      alt="Imagen del producto"
+    />
+
+    <mat-card-content>
+      <div class="content-section">
+        <h2 class="section-title">Detalles:</h2>
+        <p class="card-text">{{ item.descripcion }}</p>
+      </div>
+
+      <div class="content-section">
+        <h3 class="section-title">Categoria:</h3>
+        <p class="card-text">{{ item.categoria }}</p>
+      </div>
+
+      <div class="content-section">
+        <h3 class="section-title">Valor:</h3>
+        <p class="card-text">{{ item.precio | currency : "COP $" }}</p>
+      </div>
+    </mat-card-content>
+
+    <mat-card-actions class="card-actions">
+      <button mat-button class="add-to-cart-button" (click)="addToCart(item)">
+        Añadir al carrito
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

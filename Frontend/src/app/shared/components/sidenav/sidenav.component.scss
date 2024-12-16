@@ -1,0 +1,95 @@
+.toolbar-svg {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.footer-text-container {
+  text-align: center;
+  background: #ffffff;
+  padding: 1rem;
+  margin-top: -6rem;
+}
+
+.footer-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4E2581;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.toolbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+}
+
+.toolbar-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.toolbar-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.toolbar-link {
+  color: #ffffff !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.toolbar-link:hover {
+  color: #6a11cb;
+}
+
+.toolbar-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.logout-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  background: #d32f2f;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.logout-button:hover {
+  background: #b71c1c;
+}
+
+.logout-icon {
+  width: 20px;
+  height: 20px;
+  fill: white;
+}
+
+.action-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #0056b3;
+  color: white;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.action-button mat-icon {
+  font-size: 24px;
+  display: block;
+}
+

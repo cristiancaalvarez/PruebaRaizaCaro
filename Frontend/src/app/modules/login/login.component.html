@@ -1,0 +1,17 @@
+<div class="login-container">
+  <div class="login-box">
+    <h2>Iniciar Sesión - Talataa</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <div class="input-group">
+        <input type="text" formControlName="username" placeholder="Usuario" required />
+        <div *ngIf="email.invalid && email.touched" class="error">Usuario es requerido</div>
+      </div>
+      <div class="input-group">
+        <input type="password" formControlName="password" placeholder="Contraseña" required />
+        <div *ngIf="password.invalid && password.touched" class="error">Contraseña es requerida</div>
+      </div>
+      <button type="submit" [disabled]="loginForm.invalid">Iniciar</button>
+      <div *ngIf="loginError" class="error">{{ loginError }}</div>
+    </form>
+  </div>
+</div>
